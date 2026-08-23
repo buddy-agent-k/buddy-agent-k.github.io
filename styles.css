@@ -17,10 +17,12 @@ h1 { font-size: clamp(2rem, 7vw, 3.2rem); margin: 0 0 8px; }
 h2 { font-size: 1.25rem; margin: 0 0 10px; }
 p, ul { margin-bottom: 0; }
 ul { padding-left: 1.25rem; }
+code { overflow-wrap: anywhere; }
 a { color: #9f3f30; font-weight: 700; }
 .eyebrow { color: var(--coral); font-size: .82rem; font-weight: 900; letter-spacing: .08em; }
 .lead, .meta { color: var(--muted); }
 .meta { font-size: .88rem; }
+.notice { background: #f8ded5; }
 nav { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
 nav a { background: var(--sage); border-radius: 999px; padding: 8px 14px; text-decoration: none; }
 @media (max-width: 520px) { main { padding-top: 20px; } header, section { border-radius: 18px; padding: 18px; } }

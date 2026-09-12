@@ -27,7 +27,7 @@ nav { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
 nav a { background: var(--sage); border-radius: 999px; padding: 8px 14px; text-decoration: none; }
 @media (max-width: 520px) { main { padding-top: 20px; } header, section { border-radius: 18px; padding: 18px; } }
 
-/* Homepage only: keep the existing policy and support page styles intact. */
+/* Marketing pages */
 .home { background: #f6f5ef; color: #272c27; word-break: keep-all; overflow-wrap: anywhere; }
 .home a { color: #365943; text-underline-offset: 4px; }
 .home a:focus-visible { outline: 2px solid #365943; outline-offset: 5px; }
@@ -38,13 +38,20 @@ nav a { background: var(--sage); border-radius: 999px; padding: 8px 14px; text-d
 .home main { max-width: 920px; padding: 0; }
 .home header, .home section { background: none; border: 0; border-radius: 0; margin: 0; padding: 0; }
 .home .hero { padding: 68px 0 64px; }
-.home .build-label, .home .chapter-label, .home .footer-mark { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .73rem; color: #606c60; }
+.home .hero-with-character { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 56px; align-items: center; }
+.home .build-label, .home .chapter-label, .home .footer-mark, .home .timeline-meta { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .73rem; color: #606c60; }
 .home .build-label { margin: 0 0 24px; }
 .home .build-label span, .home .period { color: #476b48; }
 .home h1 { font-size: clamp(2.7rem, 7vw, 4.8rem); font-weight: 750; letter-spacing: -.06em; line-height: 1.16; margin: 0; }
 .home .intro { margin: 26px 0; font-size: 1.05rem; color: #4d584e; }
-.home .download { display: inline-flex; align-items: center; gap: 26px; padding: 12px 18px; border: 1px solid #365943; background: #365943; color: #fffdf7; border-radius: 5px; text-decoration: none; font-size: .9rem; }
-.home .download:hover { background: #294632; }
+.home .character-slot { display: grid; place-items: center; aspect-ratio: 1; }
+.home .character-slot img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 24%; box-shadow: 0 14px 35px rgba(35, 46, 36, .10); }
+.home .character-fallback { display: grid; place-items: center; width: 100%; height: 100%; border: 1px solid #cdd3c6; border-radius: 24%; background: #e7ebe1; font-size: 5rem; font-weight: 800; letter-spacing: -.08em; color: #476b48; }
+.home .app-store-badge { display: inline-flex; align-items: center; gap: 10px; min-width: 168px; padding: 8px 14px 9px; border: 1px solid #111; border-radius: 8px; background: #050505; color: #fff; text-decoration: none; line-height: 1; }
+.home .app-store-badge:hover { background: #171717; }
+.home .app-store-badge .apple-mark { font-size: 1.8rem; line-height: 1; }
+.home .app-store-badge small { display: block; font-size: .57rem; font-weight: 500; letter-spacing: .01em; }
+.home .app-store-badge strong { display: block; margin-top: 2px; font-size: 1.12rem; font-weight: 600; letter-spacing: -.02em; }
 .home .aside { font-size: .81rem; color: #606c60; margin-top: 14px; }
 .home .chapter { display: grid; grid-template-columns: 175px minmax(0, 1fr); gap: 24px; padding: 36px 0; border-top: 1px solid #d5d8cd; }
 .home .chapter-label { margin: 4px 0 0; }
@@ -54,29 +61,47 @@ nav a { background: var(--sage); border-radius: 999px; padding: 8px 14px; text-d
 .home .chapter p.aside { font-size: .81rem; }
 .home .capabilities { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 20px; list-style: none; padding: 0; margin: 20px 0 0; font-size: .88rem; }
 .home .capabilities li::before { content: "+"; color: #476b48; font-family: monospace; margin-right: 10px; }
-.home .roadmap { list-style: none; padding: 0; margin: 24px 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
-.home .roadmap li { position: relative; padding-top: 12px; border-top: 2px solid #c7cdbf; }
-.home .roadmap li:first-child { border-color: #476b48; }
-.home .roadmap li:not(:last-child)::after { content: "→"; position: absolute; right: -12px; top: -16px; color: #606c60; }
-.home .roadmap strong { display: block; font-size: .83rem; }
-.home .roadmap span { display: block; margin-top: 4px; font-size: .72rem; color: #606c60; }
 .home .local-note { margin-top: 28px; padding: 22px; background: #e9ede3; border-left: 2px solid #6f866b; }
 .home h3 { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 1.25rem; line-height: 1.35; margin: 0; }
-.home .project-links { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 20px; font-size: .85rem; }
+.home .text-link { display: inline-block; margin-top: 18px; font-size: .88rem; }
 .home .site-footer { padding: 24px 0 32px; border-top: 1px solid #d5d8cd; }
 .home .site-footer nav { margin-top: 12px; gap: 8px 20px; }
 .home .site-footer nav a { padding: 4px 0; background: none; border-radius: 0; font-size: .78rem; font-weight: 500; text-decoration: underline; }
 .home .skip-link { position: absolute; top: 8px; left: 12px; padding: 8px 12px; background: #fffdf7; transform: translateY(-160%); }
 .home .skip-link:focus { transform: translateY(0); }
-@media (max-width: 640px) {
+
+/* Journey timeline */
+.journey-page .journey-hero { padding: 68px 0 58px; }
+.journey-page .timeline { position: relative; padding: 8px 0 40px; }
+.journey-page .timeline::before { content: ""; position: absolute; left: 176px; top: 0; bottom: 28px; width: 1px; background: #cfd4c9; }
+.journey-page .timeline-item { position: relative; display: grid; grid-template-columns: 145px minmax(0, 1fr); gap: 56px; padding: 0 0 42px; }
+.journey-page .timeline-item::before { content: ""; position: absolute; left: 171px; top: 6px; width: 9px; height: 9px; border-radius: 50%; background: #f6f5ef; border: 2px solid #7a8678; }
+.journey-page .timeline-meta { text-align: right; line-height: 1.45; }
+.journey-page .timeline-meta span, .journey-page .timeline-meta b { display: block; }
+.journey-page .timeline-meta b { margin-top: 4px; color: #394a3d; font-size: .66rem; letter-spacing: .08em; }
+.journey-page .timeline-body h2 { font-size: 1.22rem; }
+.journey-page .timeline-body p { margin-top: 10px; font-size: .92rem; }
+.journey-page .timeline-item.shipped::before { background: #476b48; border-color: #476b48; }
+.journey-page .timeline-item.now::before { width: 13px; height: 13px; left: 169px; top: 4px; background: #476b48; border-color: #476b48; box-shadow: 0 0 0 5px #dfe7dc; }
+.journey-page .timeline-item.future { color: #4f5b50; }
+.journey-page .timeline-item.future::before { border-style: dashed; background: #f6f5ef; }
+.journey-page .timeline-item.last { padding-bottom: 0; }
+
+@media (max-width: 700px) {
   .home .site-bar, .home main, .home .site-footer { width: calc(100% - 40px); }
   .home .hero { padding: 48px 0; }
+  .home .hero-with-character { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .home .character-slot { width: min(62vw, 210px); order: -1; }
   .home .chapter { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 28px 0; }
   .home .intro { font-size: .95rem; }
-  .home .roadmap { grid-template-columns: minmax(0, 1fr); gap: 0; }
-  .home .roadmap li { border-top: 0; border-left: 2px solid #c7cdbf; padding: 8px 0 12px 18px; }
-  .home .roadmap li:not(:last-child)::after { content: "↓"; left: -7px; right: auto; top: auto; bottom: -7px; background: #f6f5ef; line-height: 14px; }
-  .home .roadmap span { margin-top: 0; }
+  .journey-page .journey-hero { padding: 48px 0; }
+  .journey-page .timeline::before { left: 7px; }
+  .journey-page .timeline-item { grid-template-columns: minmax(0, 1fr); gap: 9px; padding: 0 0 34px 28px; }
+  .journey-page .timeline-item::before { left: 2px; top: 6px; }
+  .journey-page .timeline-item.now::before { left: 0; }
+  .journey-page .timeline-meta { text-align: left; }
+  .journey-page .timeline-meta span, .journey-page .timeline-meta b { display: inline; }
+  .journey-page .timeline-meta b { margin-left: 8px; }
 }
 @media (max-width: 380px) {
   .home .capabilities { grid-template-columns: minmax(0, 1fr); }

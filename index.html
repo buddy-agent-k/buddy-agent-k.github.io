@@ -3,18 +3,83 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="김콩 iPhone 앱 공식 안내">
-  <title>김콩</title>
+  <meta name="description" content="작은 로컬 AI 친구 김콩. App Store에 나온 v1부터 친구이자 개인 비서인 김군까지, 혼자 만들어 가는 오픈소스 에이전트 프로젝트입니다.">
+  <title>김콩 · Buddy Agent K</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <main>
-    <header>
-      <div class="eyebrow">KIMGONG · iPHONE</div>
-      <h1>김콩</h1>
-      <p class="lead">iPhone에서 사용하는 로컬 우선 친구 앱입니다.</p>
-      <nav><a href="privacy/">개인정보 처리방침</a><a href="support/">지원</a><a href="notices/">모델·오픈소스 고지</a></nav>
+<body class="home">
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <div class="site-bar">
+    <a class="wordmark" href="./">BUDDY AGENT K<span>개인 에이전트 제작 일지</span></a>
+    <a href="https://github.com/buddy-agent-k/buddy">GitHub ↗</a>
+  </div>
+  <main id="main">
+    <header class="hero">
+      <p class="build-label"><span aria-hidden="true">●</span> KIMKONG v1 · iPhone · 출시됨</p>
+      <h1>김콩부터<br>시작합니다<span class="period">.</span></h1>
+      <p class="intro">작은 로컬 AI 친구를 만들었습니다.<br>어디까지 친구가 될 수 있을지, 계속 만들어보는 중입니다.</p>
+      <a class="download" href="https://apps.apple.com/kr/app/%EA%B9%80%EC%BD%A9/id6804726430">App Store에서 받기 <span aria-hidden="true">↗</span></a>
+      <p class="aside">아직 김군은 아닙니다. 키우는 중입니다.</p>
     </header>
+    <section class="chapter" aria-labelledby="now-title">
+      <p class="chapter-label">01 / NOW</p>
+      <div>
+        <h2 id="now-title">지금의 김콩</h2>
+        <p>iPhone 안의 작은 모델로 대화하고, 고민을 나눕니다.</p>
+        <ul class="capabilities">
+          <li>이야기 나누기</li><li>두 선택지 비교하기</li>
+          <li>허락한 내용만 기억하기</li><li>이번 세션의 지난 대화 보기</li>
+          <li>간단한 번역하기</li><li>기기·로컬 모델 상태 확인하기</li>
+        </ul>
+      </div>
+    </section>
+    <section class="chapter" aria-labelledby="origin-title">
+      <p class="chapter-label">02 / ORIGIN</p>
+      <div>
+        <h2 id="origin-title">돈은 잃었고, 생각은 남았습니다.</h2>
+        <p>ElizaOS에 기대를 걸고 투자했다가 돈을 잃었습니다.<br>그래도 개인 AI 에이전트라는 생각은 계속 좋았습니다.</p>
+        <p>그래서 작은 것부터 직접 만들기 시작했습니다. 첫 번째가 김콩입니다.</p>
+      </div>
+    </section>
+    <section class="chapter" aria-labelledby="next-title">
+      <p class="chapter-label">03 / NEXT</p>
+      <div>
+        <h2 id="next-title">친구에게 도구를 하나씩.</h2>
+        <ol class="roadmap" aria-label="김콩에서 김군으로 성장하는 방향">
+          <li><strong>김콩 v1</strong><span>출시</span></li>
+          <li><strong>기억</strong><span>더 잘 이어가기</span></li>
+          <li><strong>도구</strong><span>할 수 있는 일 늘리기</span></li>
+          <li><strong>외부 LLM API</strong><span>원할 때 연결하기</span></li>
+          <li><strong>김군</strong><span>친구이자 개인 비서</span></li>
+        </ol>
+        <p>이미 있는 기억 기능을 다듬고, 웹·검색, 알림·캘린더 같은 도구도 하나씩 붙여보려 합니다.</p>
+        <p class="aside">앞으로 만들어갈 방향입니다. 도구와 API 연결은 아직 계획이며, 순서와 범위는 달라질 수 있습니다.</p>
+        <div class="local-note">
+          <h3>LOCAL FIRST,<br>NOT LOCAL ONLY.</h3>
+          <p>기본은 내 기기에서. 더 큰 모델이 필요하면 사용자가 선택해 외부 LLM API를 연결할 수 있도록 만들 생각입니다.</p>
+          <p class="aside">김콩 v1은 외부 LLM API를 직접 호출하지 않습니다.</p>
+        </div>
+      </div>
+    </section>
+    <section class="chapter adventure" aria-labelledby="adventure-title">
+      <p class="chapter-label">04 / STILL BUILDING</p>
+      <div>
+        <h2 id="adventure-title">혼자 만들고, 고치고, 계속합니다.</h2>
+        <p>Buddy Agent K는 오픈소스로 로컬 에이전트를 만들어가는 개인 프로젝트입니다. 모르는 건 배우고, 안 되면 고치면서 김콩을 김군으로 키워가려 합니다.</p>
+        <div class="project-links">
+          <a href="https://github.com/buddy-agent-k/buddy">코드와 개발 기록 ↗</a>
+          <a href="https://github.com/buddy-agent-k/buddy-agent-k.github.io">이 사이트의 소스 ↗</a>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer class="site-footer">
+    <span class="footer-mark">BUDDY AGENT K <span aria-hidden="true">/</span> 계속 만드는 중</span>
+    <nav aria-label="정책 및 지원">
+      <a href="privacy/">개인정보 처리방침</a>
+      <a href="support/">지원</a>
+      <a href="notices/">모델·오픈소스 고지</a>
+    </nav>
+  </footer>
 </body>
 </html>

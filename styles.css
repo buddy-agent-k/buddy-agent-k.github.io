@@ -46,8 +46,6 @@ nav a { background: var(--sage); border-radius: 999px; padding: 8px 14px; text-d
 .home .intro { margin: 26px 0; font-size: 1.05rem; color: #4d584e; }
 .home .character-slot { display: grid; place-items: center; aspect-ratio: 1; }
 .home .character-slot img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 24%; box-shadow: 0 14px 35px rgba(35, 46, 36, .10); }
-.home .character-fallback { display: grid; place-items: center; width: 100%; height: 100%; border: 1px solid #cdd3c6; border-radius: 24%; background: #e7ebe1; font-size: 5rem; font-weight: 800; letter-spacing: -.08em; color: #476b48; }
-.home .character-slot [hidden] { display: none; }
 .home .app-store-badge { display: inline-flex; align-items: center; gap: 10px; min-width: 168px; padding: 8px 14px 9px; border: 1px solid #111; border-radius: 8px; background: #050505; color: #fff; text-decoration: none; line-height: 1; }
 .home .app-store-badge:hover { background: #171717; }
 .home .app-store-badge .apple-mark { font-size: 1.8rem; line-height: 1; }

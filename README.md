@@ -3,7 +3,7 @@
 Public landing, journey, support, privacy, and model/open-source notice pages for Buddy Agent apps.
 
 - Site: https://buddy-agent-k.github.io/
-- Public update policy: [UPDATE_POLICY.md](./UPDATE_POLICY.md)
-- KimKong implementation/release source of truth: `buddy-agent-k/buddy`
+- Public output repository: `buddy-agent-k/buddy-agent-k.github.io`
+- Private product/source-of-truth repository: `buddy-agent-k/buddy`
 
-Public pages summarize user-facing release status and roadmap. Internal build evidence, TestFlight state, and canonical implementation plans remain in the product repository.
+This repository stores public-facing output only. Operating policy, release evidence, and implementation planning are maintained in the private product repository.

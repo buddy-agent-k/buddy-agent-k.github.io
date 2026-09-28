@@ -31,12 +31,12 @@ Update the public site when any of these happens:
 4. Privacy, support, model/license notices, or external-service boundaries change.
 5. The canonical near-term roadmap changes enough that the public Journey page would become misleading.
 
-A build-number-only change with no user-visible significance does not require a public-site update.
+A build-number-only change with no user-visible significance does not require a public-site update. The Journey page is milestone-based, not a build-by-build changelog.
 
 ## What to update
 
 - `index.html`: current public product positioning and major available/current-development capabilities.
-- `journey/index.html`: concise release history, current review/testing status, and clearly labeled roadmap.
+- `journey/index.html`: milestone-based product history and clearly labeled roadmap. Do not add one timeline item per build.
 - `privacy/`, `support/`, `notices/`: update whenever their underlying policy or legal/technical facts change.
 - `README.md`: keep the source-of-truth and update-policy pointers current.
 
@@ -52,6 +52,6 @@ A build-number-only change with no user-visible significance does not require a 
 
 As of 2026-09-28:
 
-- Public historical release: KimKong 1.0, stabilized through Build 6.
-- Current source / App Store submission: **1.0.3 (Build 12), App Store review in progress**.
-- Next documented work: **Build 13**, with Tool Discovery, Voice UX (STT + TTS), Local Capability Bridge v1 PoC, and regression/integration validation.
+- Current public App Store release: **KimKong 1.0.3**.
+- Public Journey history is organized by product milestones rather than internal build numbers.
+- Next documented work includes Tool Discovery, Voice UX (STT + TTS), Local Capability Bridge v1 PoC, and regression/integration validation.
